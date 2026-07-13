@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommits"],
+  "labels": ["dependencies"],
+  "schedule": ["before 6am on monday"],
+  "packageRules": [
+    {
+      "description": "Auto-merge dev-dependency and upstream bumps once CI (incl. compat) is green.",
+      "matchDepTypes": ["devDependencies", "dependencies"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Track the axios peer range but never auto-widen it silently.",
+      "matchPackageNames": ["axios"],
+      "matchDepTypes": ["peerDependencies"],
+      "automerge": false
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "axios-proxyhat",
+  "version": "0.1.0",
+  "description": "Route axios requests through ProxyHat residential proxies — a preconfigured axios instance (or a ready-made https-proxy-agent) with rotating IPs, geo-targeting, and sticky sessions.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProxyHatCom/axios-proxyhat.git"
+  },
+  "homepage": "https://github.com/ProxyHatCom/axios-proxyhat#readme",
+  "bugs": {
+    "url": "https://github.com/ProxyHatCom/axios-proxyhat/issues"
+  },
+  "keywords": [
+    "axios",
+    "proxyhat",
+    "proxy",
+    "https-proxy-agent",
+    "residential-proxy",
+    "proxy-rotation",
+    "web-scraping",
+    "http-client"
+  ],
+  "author": "ProxyHat",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.0",
+    "proxyhat": "^0.2.0"
+  },
+  "peerDependencies": {
+    "axios": ">=1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "axios": "^1.7.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
