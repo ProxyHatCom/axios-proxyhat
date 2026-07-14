@@ -1,6 +1,6 @@
 {
   "name": "axios-proxyhat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Route axios requests through ProxyHat residential proxies — a preconfigured axios instance (or a ready-made https-proxy-agent) with rotating IPs, geo-targeting, and sticky sessions.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
