@@ -7,6 +7,10 @@ Route [axios](https://axios-http.com) requests through [ProxyHat](https://proxyh
 [![npm](https://img.shields.io/npm/v/axios-proxyhat)](https://www.npmjs.com/package/axios-proxyhat)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> [!TIP]
+> **Recommended proxies — [ProxyHat](https://proxyhat.com?utm_source=github&utm_medium=readme&utm_campaign=axios&utm_content=callout) residential IPs.** Every feature in this package is tested end-to-end against ProxyHat and works great. First-class integration; also works with any proxy, or none.
+
+
 ## Why
 
 Scraping and API automation from datacenter IPs gets you blocked and rate-limited. This package plugs ProxyHat's residential IPs (50M+ across 148+ countries) into axios the right way: a proxy **agent** (via [`https-proxy-agent`](https://www.npmjs.com/package/https-proxy-agent)) with `proxy: false`. axios's built-in `proxy` option is [unreliable for HTTPS](https://github.com/axios/axios/issues/925) because it doesn't tunnel with `CONNECT`; an `HttpsProxyAgent` does, so HTTPS traffic is proxied end-to-end with the target's own TLS.
